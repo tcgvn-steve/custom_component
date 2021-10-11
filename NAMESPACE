@@ -1,4 +1,12 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
+export(CalendarComponent)
 export(MyCustomComponent)
+export(QuillComponent)
+export(SteveComponent)
+export(TableComponent)
+export(calendarComponent)
 export(myCustomComponent)
+export(quillComponent)
+export(steveComponent)
+export(tableComponent)

@@ -1,4 +1,25 @@
 {
+  "src/lib/components/CalendarComponent.react.js": {
+    "description": "MyCalendar allows the user to select a date", 
+    "displayName": "CalendarComponent", 
+    "methods": [], 
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        }, 
+        "required": false, 
+        "description": "The ID used to identify this component in Dash callbacks."
+      }, 
+      "date": {
+        "type": {
+          "name": "string"
+        }, 
+        "required": false, 
+        "description": "The date as a string"
+      }
+    }
+  }, 
   "src/lib/components/MyCustomComponent.react.js": {
     "description": "ExampleComponent is an example component.\nIt takes a property, `label`, and\ndisplays it.\nIt renders an input with the property `value`\nwhich is editable by the user.", 
     "displayName": "MyCustomComponent", 
@@ -34,6 +55,34 @@
       }
     }
   }, 
+  "src/lib/components/QuillComponent.react.js": {
+    "description": "ExampleComponent is an example component.\nIt takes a property, `label`, and\ndisplays it.\nIt renders an input with the property `value`\nwhich is editable by the user.", 
+    "displayName": "QuillComponent", 
+    "methods": [], 
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        }, 
+        "required": false, 
+        "description": "The ID used to identify this component in Dash callbacks."
+      }, 
+      "value": {
+        "type": {
+          "name": "string"
+        }, 
+        "required": false, 
+        "description": "The value displayed in the input."
+      }, 
+      "setProps": {
+        "type": {
+          "name": "func"
+        }, 
+        "required": false, 
+        "description": "Dash-assigned callback that should be called to report property changes\nto Dash, to make them available for callbacks.\n setProps to notify the dash callbacks about the value change."
+      }
+    }
+  }, 
   "src/lib/components/SteveComponent.react.js": {
     "description": "ExampleComponent is an example component.\nIt takes a property, `label`, and\ndisplays it.\nIt renders an input with the property `value`\nwhich is editable by the user.", 
     "displayName": "SteveComponent", 
@@ -58,6 +107,127 @@
           "name": "string"
         }, 
         "required": false, 
+        "description": "The value displayed in the input."
+      }, 
+      "setProps": {
+        "type": {
+          "name": "func"
+        }, 
+        "required": false, 
+        "description": "Dash-assigned callback that should be called to report property changes\nto Dash, to make them available for callbacks."
+      }
+    }
+  }, 
+  "src/lib/components/TableComponent.react.js": {
+    "description": "Dashcustomgrid is a component wrapped on ag-Grid.\nIt takes two property, `columnDefs`, and `rowData`\ndisplays them.", 
+    "displayName": "Dashcustomgrid", 
+    "methods": [
+      {
+        "name": "onSelectionChanged", 
+        "docblock": null, 
+        "modifiers": [], 
+        "params": [], 
+        "returns": null
+      }
+    ], 
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        }, 
+        "required": false, 
+        "description": "The ID used to identify this component in Dash callbacks."
+      }, 
+      "gridApi": {
+        "type": {
+          "name": "object"
+        }, 
+        "required": false, 
+        "description": "gridApi for ag-Grid."
+      }, 
+      "columnDefs": {
+        "type": {
+          "name": "array"
+        }, 
+        "required": false, 
+        "description": "columnDefs for ag-Grid."
+      }, 
+      "rowData": {
+        "type": {
+          "name": "array"
+        }, 
+        "required": false, 
+        "description": "rowData for ag-Grid."
+      }, 
+      "selectedRows": {
+        "type": {
+          "name": "array"
+        }, 
+        "required": false, 
+        "description": "selectedRows for ag-Grid."
+      }, 
+      "setProps": {
+        "type": {
+          "name": "func"
+        }, 
+        "required": false, 
+        "description": "Dash-assigned callback that should be called to report property changes\nto Dash, to make them available for callbacks."
+      }
+    }
+  }, 
+  "src/lib/components/TimelineComponent.react.js": {
+    "description": "", 
+    "displayName": "TimelineComponent", 
+    "methods": [], 
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        }, 
+        "required": false, 
+        "description": "The ID used to identify this component in Dash callbacks."
+      }, 
+      "items": {
+        "type": {
+          "name": "array"
+        }, 
+        "required": true, 
+        "description": "The value displayed in the input."
+      }, 
+      "setProps": {
+        "type": {
+          "name": "func"
+        }, 
+        "required": false, 
+        "description": "Dash-assigned callback that should be called to report property changes\nto Dash, to make them available for callbacks."
+      }
+    }
+  }, 
+  "src/lib/components/TimelineComponentClass.react.js": {
+    "description": "", 
+    "displayName": "TimelineComponentClass", 
+    "methods": [
+      {
+        "name": "onSelectionChanged", 
+        "docblock": null, 
+        "modifiers": [], 
+        "params": [], 
+        "returns": null
+      }
+    ], 
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        }, 
+        "required": false, 
+        "description": "The ID used to identify this component in Dash callbacks."
+      }, 
+      "items": {
+        "type": {
+          "name": "array"
+        }, 
+        "required": true, 
         "description": "The value displayed in the input."
       }, 
       "setProps": {

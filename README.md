@@ -97,6 +97,11 @@ If you have selected install_dependencies during the prompt, you can skip this p
 
 
 
+dash-generate-components ./src/lib/components custom_components -p package-info.json
+dash-generate-components ./src/lib/timeline custom_components -p package-info.json
+npm run build:js
+
+
 pip install ../custom_components/. --use-feature=in-tree-build
 
 
