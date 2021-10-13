@@ -10,14 +10,14 @@ import PropTypes from 'prop-types';
  */
 export default class MyCustomComponent extends Component {
     render() {
-        const { id, label, setProps, value } = this.props;
+        const { id, label, setProps, data } = this.props;
 
         return (
             <div id={id}>
                 Steve's Component: {label}&nbsp;
                 <h1>Welcome to my component</h1>
                 <input
-                    value={value}
+                    value={data}
                     onChange={
                         /*
                          * Send the new value to the parent component.
@@ -28,7 +28,7 @@ export default class MyCustomComponent extends Component {
                          * app server if a callback uses the modified prop as
                          * Input or State.
                          */
-                        e => setProps({ value: e.target.value })
+                        e => setProps({ data: e.target.value })
                     }
                 />
             </div>
@@ -52,7 +52,7 @@ MyCustomComponent.propTypes = {
     /**
      * The value displayed in the input.
      */
-    value: PropTypes.string,
+    data: PropTypes.string,
 
     /**
      * Dash-assigned callback that should be called to report property changes

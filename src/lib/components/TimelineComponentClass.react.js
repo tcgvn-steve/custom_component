@@ -1,38 +1,24 @@
 import PropTypes from 'prop-types';
-import React from "react"
+import React, { Component } from 'react';
+
 import { Chrono } from "react-chrono";
 
 // https://reactjsexample.com/modern-timeline-component-for-react/
 export default class TimelineComponentClass extends Component {
-    // const items = [{
-    //     title: title,
-    //     cardTitle: "Dunkirk",
-    //     cardSubtitle: "Men of the British Expeditionary Force (BEF) wade out to..",
-    //     cardDetailedText: "Men of the British Expeditionary Force (BEF) wade out to..",
-    //     media: {
-    //         type: "IMAGE",
-    //         source: {
-    //             url: "http://someurl/image.jpg"
-    //         }
-    //     }
-    // },
-    // ];
-
-    onSelectionChanged() {
-        console.log("==============");
-    };
-
     render() {
-        const { id, items } = this.props;
+        const { id, items, mode, setProps, value, height, width } = this.props;
         return (
-            <div id={id} style={{ width: "500px", height: "950px" }}>
-                <Chrono items={items} mode="VERTICAL" onItemSelected={this.onSelectionChanged} />
+            <div id={id} style={{ width: { width }, height: { height } }}>
+                <Chrono items={items} mode={mode} onItemSelected={e => setProps({ value: JSON.stringify(e) })} />
             </div>
         )
     }
 }
 
-TimelineComponentClass.defaultProps = {};
+TimelineComponentClass.defaultProps = {
+    height: "850px",
+    width: "700px"
+};
 
 TimelineComponentClass.propTypes = {
     /**
@@ -42,7 +28,11 @@ TimelineComponentClass.propTypes = {
     /**
      * The value displayed in the input.
      */
+    value: PropTypes.string,
+    width: PropTypes.string,
+    height: PropTypes.string,
     items: PropTypes.array.isRequired,
+    mode: PropTypes.string.isRequired,
 
     /**
      * Dash-assigned callback that should be called to report property changes
@@ -50,3 +40,4 @@ TimelineComponentClass.propTypes = {
      */
     setProps: PropTypes.func
 };
+

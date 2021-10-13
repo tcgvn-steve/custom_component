@@ -106,3 +106,6 @@ pip install ../custom_components/. --use-feature=in-tree-build
 
 
 https://markgituma.medium.com/adding-custom-components-to-python-dash-cfafdbfb22f9
+
+
+pip freeze > requirements.txt

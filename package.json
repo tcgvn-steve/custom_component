@@ -1,5 +1,6 @@
 {
   "name": "custom_components",
+  "nameComponent": "timeline_components",
   "version": "0.0.1",
   "description": "Project Description",
   "main": "build/index.js",

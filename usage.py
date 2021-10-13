@@ -8,14 +8,14 @@ app = dash.Dash(__name__)
 app.layout = html.Div([
     custom_components.MyCustomComponent(
         id='input',
-        value='my-value',
+        data='my-value',
         label='my-label'
     ),
     html.Div(id='output')
 ])
 
 
-@app.callback(Output('output', 'children'), [Input('input', 'value')])
+@app.callback(Output('output', 'children'), [Input('input', 'data')])
 def display_output(value):
     return 'You have entered {}'.format(value)
 
